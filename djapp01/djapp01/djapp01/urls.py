@@ -3,8 +3,9 @@ Definition of urls for djapp01.
 """
 
 from datetime import datetime
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 from webui.forms import BootstrapAuthenticationForm
+from webui import views
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -13,9 +14,11 @@ from webui.forms import BootstrapAuthenticationForm
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'webui.views.home', name='home'),
-    url(r'^contact$', 'webui.views.contact', name='contact'),
-    url(r'^about', 'webui.views.about', name='about'),
+    url(r'^$', views.HomeView.as_view(), name='home'),
+    url(r'^contact$', views.ContactView.as_view(), name='contact'),
+    url(r'^about', views.AboutView.as_view(), name='about'),
+    url(r'^people', views.PeopleView.as_view(), name='people'),
+    url(r'^api/', include('api.urls')),
     url(r'^login/$',
         'django.contrib.auth.views.login',
         {

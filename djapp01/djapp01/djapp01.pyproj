@@ -29,6 +29,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="api\models.py" />
+    <Compile Include="api\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\serializers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\tests.py" />
+    <Compile Include="api\views.py" />
+    <Compile Include="api\__init__.py" />
     <Compile Include="webui\forms.py" />
     <Compile Include="webui\models.py" />
     <Compile Include="webui\tests.py" />
@@ -41,6 +51,8 @@
     <Compile Include="djapp01\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="api\" />
+    <Folder Include="api\templates\" />
     <Folder Include="webui\" />
     <Folder Include="webui\static\" />
     <Folder Include="webui\static\webui\" />
@@ -48,10 +60,12 @@
     <Folder Include="webui\static\webui\fonts\" />
     <Folder Include="webui\static\webui\scripts\" />
     <Folder Include="webui\templates\" />
+    <Folder Include="webui\templates\api\" />
     <Folder Include="webui\templates\webui\" />
     <Folder Include="djapp01\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="api\templates\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="webui\static\webui\content\bootstrap.css" />
@@ -73,9 +87,12 @@
     <Content Include="webui\static\webui\scripts\jquery.validate.unobtrusive.js" />
     <Content Include="webui\static\webui\scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="webui\static\webui\scripts\modernizr-2.6.2.js" />
+    <Content Include="webui\static\webui\scripts\PeopleController.js" />
+    <Content Include="webui\static\webui\scripts\PeopleController.ts" />
     <Content Include="webui\static\webui\scripts\respond.js" />
     <Content Include="webui\static\webui\scripts\respond.min.js" />
     <Content Include="webui\static\webui\scripts\_references.js" />
+    <Content Include="webui\templates\api\people.html" />
     <Content Include="webui\templates\webui\about.html" />
     <Content Include="webui\templates\webui\contact.html" />
     <Content Include="webui\templates\webui\index.html" />

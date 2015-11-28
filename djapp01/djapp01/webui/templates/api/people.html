@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>People</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="static/webui/content/bootstrap.css"/>
+    <script type="text/javascript" src="static/webui/scripts/PeopleController.js"></script>
+    <script type="text/javascript" src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//apps.bdimg.com/libs/angular.js/1.3.13/angular.min.js"></script>
+    <script type="text/javascript" src="static/webui/scripts/bootstrap.js"></script>
+</head>
+    <body>
+        {% verbatim %}
+            <div ng-controller="People.Controller">
+                <p>{{ greetingText }}</p>
+            </div>
+        {% endverbatim %}
+    </body>
+</html>
